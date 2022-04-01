@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Footer } from "../../components/Footer";
+import { Footer } from "../../components/footer/Footer";
 import { NavBar } from "../../components/navbar/NavBar";
-import { DesignCard } from "./components/DesignCard";
+import { DesignCard } from "./components/DesignContent/DesignContent";
 
 export const Service = () => {
   return (

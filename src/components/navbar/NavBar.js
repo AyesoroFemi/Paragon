@@ -28,6 +28,15 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width:991px) {
+    grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 579px) {
+        display: none;
+    }
+    
 `
 
 export const NavItem = styled.div`

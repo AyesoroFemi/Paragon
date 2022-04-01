@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Footer } from "../../components/Footer"
+import { Footer } from "../../components/footer/Footer"
 import { Container, NavBar } from "../../components/navbar/NavBar"
 import { AboutSession } from "./components/AboutSession"
 import { Banner } from "./components/Banner"

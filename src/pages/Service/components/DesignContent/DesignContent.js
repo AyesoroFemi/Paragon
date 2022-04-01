@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import { DarkRuler } from "../../../components/icons/DarkRuler";
+
+import { DesignContent } from "./DesignContent.styles";
+import { DarkRuler } from "../../../../components/icons/DarkRuler";
 
 export const DesignCard = () => {
   return (
@@ -77,26 +78,3 @@ export const DesignCard = () => {
     </DesignContent>
   );
 };
-
-export const DesignContent = styled.div`
-  transform: translateY(-2.5rem);
-  margin-left: 7rem;
-  margin-right: 7rem;
-  margin-bottom: 300px;
-  display: grid;
-  grid-template-columns: 40% 40%;
-  gap: 3rem;
-  color: #fff;
-  justify-content: space-between;
-
-  h3 {
-    font-size: 36px;
-    font-weight: 700;
-  }
-
-  p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-  }
-`;
