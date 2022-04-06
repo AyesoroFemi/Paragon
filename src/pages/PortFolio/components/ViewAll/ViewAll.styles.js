@@ -7,6 +7,7 @@ export const ViewContainer = styled.div`
   margin-bottom: 6rem;
 
   img {
+    /* max-width: 100%; */
     width: 100%;
     height: 400px;
   }
@@ -65,7 +66,7 @@ export const ViewContainer = styled.div`
 
     img {
     width: 100%;
-    height: 100%;
+    height: 400px;
   }
 
     .second__line {
@@ -73,7 +74,7 @@ export const ViewContainer = styled.div`
     }
 
     .last__line img {
-      height: 100%;
+      height: 400px;
     }
   }
 
@@ -84,7 +85,7 @@ export const ViewContainer = styled.div`
 
     img {
     width: 100%;
-    height: 100%;
+    height: 300px;
   }
   }
 `;

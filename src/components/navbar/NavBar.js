@@ -1,13 +1,20 @@
-import { NavLink } from "react-router-dom"
-import styled from "styled-components"
+import { useState } from "react";
+import { NavLink, Link } from "react-router-dom"
 import { Logo } from "../icons/Logo"
+import { IoIosMenu } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
 
+import { Container, NavItem, BurgerNav, NavWrapper, CustomNav, CustomClose } from "./NavBar.styles"
 
 export const NavBar = () => {
+
+    const [burgerStatus, setBurgerStatus] = useState(false)
+
   return (
+    <NavWrapper>
     <Container>
         <div>
-            <Logo/>
+            <Link to="/"><Logo/></Link>
         </div>
         <NavItem>
             <NavLink to="/">Home</NavLink>
@@ -16,39 +23,20 @@ export const NavBar = () => {
             <NavLink to="/about">About Us</NavLink>
             <NavLink to="/contact">Contact Us</NavLink>
         </NavItem>
-    </Container>
+        <CustomNav onClick={() => setBurgerStatus(true)}>
+            <IoIosMenu color="#fff" size={40} />
+        </CustomNav>
+        <BurgerNav show={burgerStatus}>
+            <CustomClose onClick={() => setBurgerStatus(false)}>
+                <IoMdClose color="#fff" size={30} />
+            </CustomClose>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/portfolio">Portfolio</NavLink>
+            <NavLink to="/services">Services</NavLink>
+            <NavLink to="/about">About Us</NavLink>
+            <NavLink to="/contact">Contact Us</NavLink>
+        </BurgerNav>
+    </Container>    
+</NavWrapper>
   )
 }
-
-export const Container = styled.div`
-    margin-left: 7rem;
-    margin-right: 7rem;
-    margin-top: 2rem;
-    /* border: 3px solid red; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media screen and (max-width:991px) {
-    grid-template-columns: 1fr;
-    }
-
-    @media screen and (max-width: 579px) {
-        display: none;
-    }
-    
-`
-
-export const NavItem = styled.div`
-
-    .active {
-        border-bottom: 3px solid #E59D30;
-        padding: 8px 8px;
-    }
-
-    a {
-        margin-right: 3rem;
-        text-decoration: none;
-        color: #fff;
-    }
-` 

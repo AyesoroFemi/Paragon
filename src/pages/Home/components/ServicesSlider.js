@@ -13,12 +13,20 @@ export const ServiceSlider = () => {
     let settings = {
         // dots: true,
         // focusOnSelect: true,
-        onSwipe: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
+        // onSwipe: true,
+        // infinite: true,
+        // speed: 500,
+        // slidesToShow: 4,
+        // slidesToScroll: 1,
         autoplay: true,
+
+        className: "center",
+      centerMode: true,
+      infinite: true,
+      centerPadding: "200px",
+      slidesToShow: 3,
+      speed: 500,
+
         appendDots: (dots) => (
           <div
             style={{

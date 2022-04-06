@@ -11,8 +11,8 @@ export const Service = () => {
         Services
         <p></p>
       </HeaderText>
-      <DesignCard/>
-      <Footer/>
+      <DesignCard />
+      <Footer />
     </>
   );
 };
@@ -31,6 +31,19 @@ export const HeaderText = styled.div`
     width: 9%;
     transform: translateY(-2.5rem);
   }
+
+  @media screen and (max-width: 767px) {
+    p {
+      width: 25%;
+    }
+  }
+
+  @media screen and (max-width: 579px) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    p {
+      width: 25%;
+    }
+  }
 `;
-
-

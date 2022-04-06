@@ -1,9 +1,11 @@
 import styled from "styled-components"
 import { Footer } from "../../components/footer/Footer"
-import { Container, NavBar } from "../../components/navbar/NavBar"
+import { NavBar } from "../../components/navbar/NavBar"
+import { Container } from "../../components/navbar/NavBar.styles"
+
 import { AboutSession } from "./components/AboutSession"
 import { Banner } from "./components/Banner"
-import { Forms } from "./components/Forms"
+import { Forms } from "../../components/forms/Forms"
 import { Gallery } from "./components/Gallery"
 import { ServiceSession } from "./components/ServiceSession"
 import { SliderContent } from "./components/SliderContent"

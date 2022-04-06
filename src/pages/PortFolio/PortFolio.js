@@ -51,7 +51,13 @@ export const Links = styled.div`
         padding: .8rem .2rem;
     }
 
+    @media screen and (max-width: 991px) {
+        margin-left: 7rem;
+        margin-right: 7rem;
+
     @media screen and (max-width: 767px) {
+        margin-left: 7rem;
+        margin-right: 7rem;
 
         .step {
             display: block;
@@ -60,6 +66,9 @@ export const Links = styled.div`
     }
 
     @media screen and (max-width: 579px) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+
         .activeStep{
         font-size: 16px;
         margin-right: 72px;

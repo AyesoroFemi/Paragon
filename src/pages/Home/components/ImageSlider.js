@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
+
 export const ImageSlider = () => {
 
     let settings = {
@@ -12,7 +13,8 @@ export const ImageSlider = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true
+        autoplay: true,
+
       }
 
   return (
@@ -33,6 +35,13 @@ export const ImageSlider = () => {
 export const Carousel = styled(Slider)`
   /* border: 3px solid red; */
   width: 100%;
+
+  .slick-arrow.slick-prev {
+    border: 5px solid red;
+    background-color: red;
+    border-radius: none;
+    /* transform: translate(20rem, 20rem); */
+  }
 
   div{
     width: 100%;

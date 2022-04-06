@@ -31,8 +31,8 @@ export const AboutSession = () => {
 
 
 export const Wrapper = styled.div`
-    margin-top: 300px;
-    margin-bottom: 300px;
+    margin-top: 200px;
+    margin-bottom: 200px;
     margin-right: 7rem;
     margin-left: 7rem;
     display: grid;
