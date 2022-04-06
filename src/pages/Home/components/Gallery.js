@@ -29,7 +29,6 @@ export const Gallery = () => {
 export const GalleryContainer = styled.div`
   margin-left: 7rem;
   margin-right: 7rem;
-
   margin-bottom: 5rem;
 
   h3 {
