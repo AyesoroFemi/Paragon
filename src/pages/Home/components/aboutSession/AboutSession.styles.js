@@ -94,6 +94,7 @@ export const ButtonWrapper = styled.div`
   background-color: #fff;
   align-items: center;
   gap: 10px;
+  box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
 
   div {
 

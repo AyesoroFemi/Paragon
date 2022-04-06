@@ -4,13 +4,11 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   margin-top: 2rem;
   height: 77vh;
-  /* height: 100%; */
   overflow-x: hidden;
   overflow-y: hidden;
   display: flex;
 
   @media screen and (max-width: 991px) {
-    /* flex-direction: column; */
     height: 100%;
     overflow-y: hidden;
   }
@@ -21,13 +19,10 @@ export const Wrapper = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  margin-left: 7rem;
-  margin-right: 7rem;
+   margin-left: 7rem;
   color: #fff;
-  /* overflow-y: hidden; */
 
   @media screen and (max-width: 991px) {
-    /* flex-direction: column; */
     overflow-y: hidden;
   }
 
@@ -64,16 +59,15 @@ export const ParaText = styled.div`
   font-weight: 400;
 
   @media screen and (max-width: 991px) {
-   
-    width: 100%;
+    width: 80%;
   }
   @media screen and (max-width: 579px) {
-    /* margin-left: 2rem; */
     margin-right: 2rem;
     margin-top: 1rem;
     font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
+    width: 100%;
   }
 `;
 
@@ -84,8 +78,6 @@ export const ButtonGroup = styled.div`
   gap: 1rem;
 
   @media screen and (max-width: 991px) {
-   
-   /* width: 100%; */
  }
  @media screen and (max-width: 579px) {
     margin-top: 5rem;
@@ -93,7 +85,6 @@ export const ButtonGroup = styled.div`
  }
 
   div {
-    /* padding: 1rem 1.4rem; */
     border-radius: 5px;
     justify-content: center;
   }
@@ -107,6 +98,7 @@ export const ButtonGroup = styled.div`
 
 export const ShowButton = styled.div`
   background-color: #e59d30;
+  box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
 
   div {
 
@@ -141,6 +133,7 @@ export const ShowButton = styled.div`
 export const PortFolioButton = styled.div`
   display: flex;
   background-color: #fff;
+  box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
 
   div {
       display: flex;
