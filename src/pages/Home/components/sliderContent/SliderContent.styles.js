@@ -101,17 +101,23 @@ export const ShowButton = styled.div`
   box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
 
   div {
-
       display: flex;
       align-items: center;
       gap: .5rem;
       padding: 0.8rem 1.2rem;
   }
 
+  &:hover {
+      transform: scale(1.02);
+      transition: all 0.2s ease-in-out;
+  }
+
   div a {
     text-decoration: none;
     color: black;
   }
+
+    
 
   @media screen and (max-width: 579px) {
    flex-direction: column;
@@ -129,6 +135,7 @@ export const ShowButton = styled.div`
     font-weight: 500;
   }
 `;
+
 
 export const PortFolioButton = styled.div`
   display: flex;

@@ -16,7 +16,8 @@ export const ServiceSession = () => {
 }
 
 export const Wrap = styled.div`
-    height: 90vh;
+    height: 100%;
+    /* border: 3px solid red; */
     background-image: url(./assets/pattern.png);
     color: #fff;
     overflow-x: hidden;
@@ -33,6 +34,22 @@ export const Wrap = styled.div`
         font-size: 3rem;
         text-align: center;
     }
+
+    @media screen and (max-width: 991px) {
+        
+  }
+  @media screen and (max-width: 579px) {
+
+    div h3{
+        padding-top: 3rem;
+    }
+    div h1{
+        margin-left: 2rem;
+        margin-right: 2rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+  }
 `
 
 

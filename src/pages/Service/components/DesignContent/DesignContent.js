@@ -1,12 +1,16 @@
 
 import { DesignContent } from "./DesignContent.styles";
 import { DarkRuler } from "../../../../components/icons/DarkRuler";
+import { InteriorIcon } from "../../../../components/icons/InteriorIcon";
+import { ProjectDev } from "../../../../components/icons/ProjectDev";
+import { PlanIcon } from "../../../../components/icons/PlanIcon";
+import { BimIcon } from "../../../../components/icons/BimIcon";
 
 export const DesignCard = () => {
   return (
     <DesignContent>
       <div>
-        <DarkRuler />
+        <DarkRuler  current="lightblue" fill="#e59d30" />
         <h3>Architecture Design</h3>
         <p>
           Our success is achieved through effective partnerships and meticulous
@@ -21,7 +25,7 @@ export const DesignCard = () => {
         </p>
       </div>
       <div>
-        <DarkRuler />
+        <ProjectDev  current="lightblue" fill="#e59d30" />
         <h3>Project Develpment Consultancy</h3>
         <p>
           we leverage our experience our project management systems and
@@ -33,7 +37,7 @@ export const DesignCard = () => {
         </p>
       </div>
       <div>
-        <DarkRuler />
+        <PlanIcon  current="lightblue" fill="#e59d30" />
         <h3>Planning & Urban Design</h3>
         <p>
           Urban design and planning are integrated at every stage of a project,
@@ -47,7 +51,7 @@ export const DesignCard = () => {
         </p>
       </div>
       <div>
-        <DarkRuler />
+        <InteriorIcon  current="lightblue" fill="#e59d30" />
         <h3>Interior Design</h3>
         <p>
           We are trusted by clients to create beautiful, experiential
@@ -62,7 +66,7 @@ export const DesignCard = () => {
         </p>
       </div>
       <div>
-        <DarkRuler />
+        <BimIcon  current="lightblue" fill="#e59d30" />
         <h3>Pagagon Bim Solutions</h3>
         <p>
           Urban design and planning are integrated at every stage of a project,

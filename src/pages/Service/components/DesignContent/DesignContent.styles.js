@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const DesignContent = styled.div`
   transform: translateY(-2.5rem);
   margin-left: 7rem;
@@ -23,14 +22,18 @@ export const DesignContent = styled.div`
     line-height: 28px;
   }
 
-  @media screen and (max-width:991px) {
+  @media screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 579px) {
+    margin-left: 2rem;
+    margin-right: 2rem;
     grid-template-columns: 1fr;
 
+    h3 {
+      font-size: 28px;
+      font-weight: 700;
     }
-
-    @media screen and (max-width: 579px) {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        grid-template-columns: 1fr;
-    }
+  }
 `;

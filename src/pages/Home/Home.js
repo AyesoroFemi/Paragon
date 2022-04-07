@@ -22,7 +22,7 @@ export const Home = () => {
               <SocialIcon/>
           </IconWrapper>
           <AboutSession />
-          {/* <ServiceSession/> */}
+          <ServiceSession/>
           <Gallery />
           <Banner />
           <Forms />
