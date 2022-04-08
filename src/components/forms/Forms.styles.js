@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const FormWrapper = styled.div`
     border: 1px solid transparent;
     /* height: 120vh; */
-    background-image: url(./assets/pattern.png);
+    background-image: url(https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375740/paragon-project/assets/Pattern_ymflos.png);
     color: #fff;
     padding-top: 7rem;
     padding-bottom: 7rem;

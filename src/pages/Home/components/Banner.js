@@ -32,7 +32,7 @@ export const Wrapper = styled.div`
     padding-bottom: 4rem;
     padding-left: 7rem;
     height: 100%;
-    background-image: linear-gradient(90deg, #C4C4C4, 47.28%, rgba(148, 134, 122, 0) 62.75%), url(./assets/banner.png);
+    background-image: linear-gradient(90deg, #C4C4C4, 47.28%, rgba(148, 134, 122, 0) 62.75%), url(https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375743/paragon-project/assets/banner_o0fvvv.png);
     background-position: center;
     background-repeat: no-repeat;
 

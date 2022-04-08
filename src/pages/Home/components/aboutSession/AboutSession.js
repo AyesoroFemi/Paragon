@@ -1,13 +1,19 @@
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-import { Wrapper, ImageSlide, ButtonWrapper } from "./AboutSession.styles"
+import { Wrapper, ImageSlide, ButtonWrapper } from "./AboutSession.styles";
 export const AboutSession = () => {
   return (
     <Wrapper>
       <ImageSlide>
-        <img src="assets/about.png" alt="" />
-        <img src="assets/about1.png" alt="" />
+        <img
+          src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375742/paragon-project/assets/about_taxr7a.png"
+          alt=""
+        />
+        <img
+          src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375740/paragon-project/assets/about1_svlbyl.png"
+          alt=""
+        />
       </ImageSlide>
       <div>
         <h3>About us</h3>

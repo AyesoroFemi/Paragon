@@ -18,7 +18,7 @@ export const ServiceSession = () => {
 export const Wrap = styled.div`
     height: 100%;
     /* border: 3px solid red; */
-    background-image: url(./assets/pattern.png);
+    background-image: url(https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375740/paragon-project/assets/Pattern_ymflos.png);
     color: #fff;
     overflow-x: hidden;
     padding-bottom: 4rem;

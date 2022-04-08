@@ -23,7 +23,7 @@ export const AboutContent = () => {
         </p>
       </div>
       <div>
-          <img src="assets/aboutpic.png" alt="" />
+          <img src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375743/paragon-project/assets/aboutpic_mrbd7x.png" alt="" />
       </div>
     </ContentWrapper>
   );
