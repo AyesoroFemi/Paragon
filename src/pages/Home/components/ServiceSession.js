@@ -1,12 +1,12 @@
 import styled from "styled-components"
 import { ServiceSlider } from "./ServicesSlider"
-
+import { useTheme } from "../../../context/useTheme"
 
 export const ServiceSession = () => {
-
+  const { mode } = useTheme()
   return (
     <Wrap>
-        <div>
+        <div className={`about ${mode}`}>
             <h3>Our services</h3>
             <h1>What can we offer for your home</h1>
         </div>
@@ -22,6 +22,10 @@ export const Wrap = styled.div`
     color: #fff;
     overflow-x: hidden;
     padding-bottom: 4rem;
+    
+    .about.light h1, .about.light h3 {
+        color: #000;
+    }
 
     div h3{
         padding-top: 100px;

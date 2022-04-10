@@ -2,6 +2,16 @@ import styled from "styled-components";
 
 
 export const Wrapper = styled.div`
+
+.about.dark h1, .about.dark p{
+        /* color: #fff; */
+    }
+
+    .about.light h1, .about.light p{
+        color: #232323;
+    }
+
+
   margin-top: 2rem;
   height: 77vh;
   overflow-x: hidden;
@@ -19,7 +29,8 @@ export const Wrapper = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-   margin-left: 7rem;
+
+  margin-left: 7rem;
   color: #fff;
 
   @media screen and (max-width: 991px) {
@@ -51,7 +62,7 @@ export const HeaderText = styled.h1`
   }
 `
 
-export const ParaText = styled.div`
+export const ParaText = styled.p`
   margin-top: -2rem;
   width: 33rem;
   font-size: 18px;
@@ -98,7 +109,7 @@ export const ButtonGroup = styled.div`
 
 export const ShowButton = styled.div`
   background-color: #e59d30;
-  box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
+  box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.15);
 
   div {
       display: flex;
@@ -140,13 +151,18 @@ export const ShowButton = styled.div`
 export const PortFolioButton = styled.div`
   display: flex;
   background-color: #fff;
-  box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
+  box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.15);
 
   div {
       display: flex;
       align-items: center;
       gap: .5rem;
       padding: 0.8rem 1.2rem;
+  }
+
+  &:hover {
+      transform: scale(1.02);
+      transition: all 0.2s ease-in-out;
   }
 
   div a {

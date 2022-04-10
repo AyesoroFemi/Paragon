@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from "styled-components"
 import { Footer } from "../../components/footer/Footer"
-import { NavBar } from "../../components/navbar/NavBar"
+// import { NavBar } from "../../components/navbar/NavBar"
 import { HeaderText } from "../Service/Service"
 import { ArchDesign } from "./components/ArchDesign"
 import { InteriorDesign } from "./components/InteriorDesign"
@@ -14,7 +14,7 @@ export const PortFolio = () => {
 
     return (
       <div>
-          <NavBar/>
+          {/* <NavBar/> */}
           <HeaderText>
                  Portfolio
                 <p></p>
@@ -54,6 +54,7 @@ export const Links = styled.div`
     @media screen and (max-width: 991px) {
         margin-left: 7rem;
         margin-right: 7rem;
+    }
 
     @media screen and (max-width: 767px) {
         margin-left: 7rem;
@@ -77,5 +78,4 @@ export const Links = styled.div`
         padding: 1.4rem .2rem;
     }
     }
-
 `

@@ -6,10 +6,15 @@ import { ProjectDev } from "../../../../components/icons/ProjectDev";
 import { PlanIcon } from "../../../../components/icons/PlanIcon";
 import { BimIcon } from "../../../../components/icons/BimIcon";
 
+import { useTheme } from "../../../../context/useTheme";
+
 export const DesignCard = () => {
+
+  const { mode } = useTheme()
+
   return (
     <DesignContent>
-      <div>
+      <div className={`about ${mode}`}>
         <DarkRuler  current="lightblue" fill="#e59d30" />
         <h3>Architecture Design</h3>
         <p>
@@ -24,7 +29,7 @@ export const DesignCard = () => {
           communities and users who use them.
         </p>
       </div>
-      <div>
+      <div className={`about ${mode}`}>
         <ProjectDev  current="lightblue" fill="#e59d30" />
         <h3>Project Develpment Consultancy</h3>
         <p>
@@ -36,7 +41,7 @@ export const DesignCard = () => {
           BIM 4D for program planning and BIM 5D for cost management.
         </p>
       </div>
-      <div>
+      <div className={`about ${mode}`}>
         <PlanIcon  current="lightblue" fill="#e59d30" />
         <h3>Planning & Urban Design</h3>
         <p>
@@ -50,7 +55,7 @@ export const DesignCard = () => {
           sight between the opportunity and the outcome.
         </p>
       </div>
-      <div>
+      <div className={`about ${mode}`}>
         <InteriorIcon  current="lightblue" fill="#e59d30" />
         <h3>Interior Design</h3>
         <p>
@@ -65,7 +70,7 @@ export const DesignCard = () => {
           and constraints that help inspire our unique vision for each project.
         </p>
       </div>
-      <div>
+      <div className={`about ${mode}`}>
         <BimIcon  current="lightblue" fill="#e59d30" />
         <h3>Pagagon Bim Solutions</h3>
         <p>

@@ -1,6 +1,17 @@
 import styled from "styled-components";
 
 export const DesignContent = styled.div`
+
+.about.dark {
+        /* border: 3px solid red; */
+        /* background-color: red; */
+    }
+
+    .about.light{
+        /* background-color: teal; */
+        color: #000;
+    }
+
   transform: translateY(-2.5rem);
   margin-left: 7rem;
   margin-right: 7rem;

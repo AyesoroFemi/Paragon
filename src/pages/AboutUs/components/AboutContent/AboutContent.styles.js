@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
-
 export const ContentWrapper = styled.div`
+
+    .about.light{
+        /* background-color: teal; */
+        color: #000;
+    }
+
     color: #fff;
     margin-left: 7rem;
     margin-right: 7rem;

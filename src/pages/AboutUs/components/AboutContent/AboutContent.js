@@ -1,9 +1,14 @@
 import { ContentWrapper } from "./AboutContent.styles";
 
+import { useTheme } from "../../../../context/useTheme";
+
 export const AboutContent = () => {
+
+  const { mode } = useTheme()
+
   return (
     <ContentWrapper>
-      <div>
+      <div className={`about ${mode}`}>
         <h2>Who we are? </h2>
         <p>
           Paragon Architects is a multidisciplinary design company of

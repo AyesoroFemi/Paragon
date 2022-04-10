@@ -1,8 +1,11 @@
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../../../context/useTheme";
 
 import { Wrapper, ImageSlide, ButtonWrapper } from "./AboutSession.styles";
 export const AboutSession = () => {
+
+  const { mode } = useTheme();
   return (
     <Wrapper>
       <ImageSlide>
@@ -15,7 +18,7 @@ export const AboutSession = () => {
           alt=""
         />
       </ImageSlide>
-      <div>
+      <div className={`about ${mode}`}>
         <h3>About us</h3>
         <h1>Design Excellence</h1>
         <p>

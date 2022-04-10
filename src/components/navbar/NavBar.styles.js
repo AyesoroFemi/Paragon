@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
+export const NavWrapper = styled.div`
+  border: 1px solid transparent;
+  margin-top: -.5rem;
+`;
+
 export const Container = styled.div`
+
   /* min-height: 100px; */
   /* border: 5px solid red; */
   margin-left: 7rem;
@@ -24,6 +30,17 @@ export const Container = styled.div`
 `;
 
 export const NavItem = styled.div`
+
+  .about.dark a {
+        /* border: 3px solid red;  */
+        /* background-color: red; */
+    }
+
+    .about.light a{
+        /* background-color: teal; */
+        color: #000;
+    }
+
   .active {
     border-bottom: 3px solid #e59d30;
     padding: 8px 8px;
@@ -33,7 +50,16 @@ export const NavItem = styled.div`
     margin-right: 3rem;
     text-decoration: none;
     color: #fff;
+    font-weight: 500;
   }
+
+  img {
+    transform: translateY(.5rem);
+    cursor: pointer;
+  }
+
+
+
 
   @media screen and (max-width: 991px) {
     display: none;
@@ -42,6 +68,15 @@ export const NavItem = styled.div`
   @media screen and (max-width: 579px) {
   }
 `;
+
+export const ToggleImg = styled.img`
+  border: 3px solid red;
+
+  @media screen and (min-width: 991px) {
+    display: none;
+  }
+`
+
 export const BurgerNav = styled.div`
   display: none;
 
@@ -60,7 +95,7 @@ export const BurgerNav = styled.div`
     border: 3px solid transparent;
     transform: ${(props) =>
       props.show ? "translateX(0)" : "translateX(100%)"};
-    transition: transform: 0.2s;
+    transition: transform 0.2s;
 
     .active {
       border-bottom: 3px solid #e59d30;
@@ -81,11 +116,7 @@ export const BurgerNav = styled.div`
     }
   }
 `;
-export const NavWrapper = styled.div`
-  /* border: 3px solid teal;
-    display: flex;
-    justify-content: space-between; */
-`;
+
 export const CustomNav = styled.div`
   display: none;
 

@@ -1,15 +1,20 @@
 import styled from "styled-components";
 import { Footer } from "../../components/footer/Footer";
-import { NavBar } from "../../components/navbar/NavBar";
+// import { NavBar } from "../../components/navbar/NavBar";
 import { DesignCard } from "./components/DesignContent/DesignContent";
+import { useTheme } from "../../context/useTheme";
 
 export const Service = () => {
+  const { mode } = useTheme();
+
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <HeaderText>
-        Services
-        <p></p>
+        <div className={`about ${mode}`}>
+          Services
+          <p></p>
+        </div>
       </HeaderText>
       <DesignCard />
       <Footer />
@@ -19,6 +24,16 @@ export const Service = () => {
 
 export const Container = styled.div``;
 export const HeaderText = styled.div`
+  .about.dark {
+    /* border: 3px solid red; */
+    /* background-color: red; */
+  }
+
+  .about.light {
+    /* background-color: teal; */
+    color: #000;
+  }
+
   margin-top: 100px;
   margin-left: 7rem;
   margin-right: 7rem;

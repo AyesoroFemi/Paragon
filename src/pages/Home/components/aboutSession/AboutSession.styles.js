@@ -12,6 +12,16 @@ export const Wrapper = styled.div`
   gap: 14%;
   color: #fff;
 
+  .about.dark {
+        /* border: 3px solid red; */
+        /* background-color: red; */
+    }
+
+    .about.light, .about.light h3{
+        /* background-color: teal; */
+        color: #232323;
+    }
+
   div h3 {
     color: #e59d30;
     font-size: 24px;
@@ -66,13 +76,14 @@ export const ImageSlide = styled.div`
         transform: translate(10rem, 15rem);
         position: relative;
     }
+  }
 
     @media screen and (max-width: 579px) {
         margin-top: 1rem;
         margin-bottom: 10rem;
         margin-right: 1rem;
     
-        img:nth-of-type(1){
+        img:nth-of-type(1) {
         position: absolute;
         width: 80%;
     }
@@ -81,8 +92,8 @@ export const ImageSlide = styled.div`
         transform: translate(2.2rem, 16rem);
         position: relative;
         max-width: 100%;
-        }
     }
+  }
 `;
 
 export const ButtonWrapper = styled.div`

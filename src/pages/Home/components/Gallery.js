@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../../context/useTheme";
 
 export const Gallery = () => {
+  const { mode } = useTheme()
   return (
     <GalleryContainer>
+      <div className={`about ${mode}`}>
       <h3>Portfolio</h3>
       <ImageWrapper>
         <img
@@ -34,6 +37,7 @@ export const Gallery = () => {
           <BsArrowRight color="" size={20} />
         </span>
       </ProfileButton>
+      </div>
     </GalleryContainer>
   );
 };
@@ -42,6 +46,16 @@ export const GalleryContainer = styled.div`
   margin-left: 7rem;
   margin-right: 7rem;
   margin-bottom: 5rem;
+
+  .about.dark h3 {
+        /* border: 3px solid red; */
+        /* background-color: red; */
+    }
+
+    .about.light h3{
+        /* background-color: teal; */
+        color: #000;
+    }
 
   h3 {
     color: #fff;
@@ -86,7 +100,7 @@ export const ProfileButton = styled.div`
     padding: 0.1rem 1rem;
     background-color: #232323;
     border-radius: 5px;
-    justify-content: ;
+    /* justify-content: ; */
     background-color: #fff;
     margin: 5rem 0;
     gap: 8px;
