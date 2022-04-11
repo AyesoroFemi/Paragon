@@ -1,8 +1,6 @@
-import { useTheme } from "../../context/useTheme";
+
 
 export const DarkRuler = () => {
-
-  // const { mode } = useTheme()
   return (
     <svg
     width={97}
