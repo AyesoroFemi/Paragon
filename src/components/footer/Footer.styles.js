@@ -5,7 +5,7 @@ export const FooterWrapper = styled.div`
   padding-bottom: 27px;
   padding-left: 7rem;
   padding-right: 7rem;
-  background-color: #434343;
+  background-color: ${props => props.mode === 'dark' ? '#434343' : '#fff' };
   display: flex;
   justify-content: space-between;
   align-items: center;

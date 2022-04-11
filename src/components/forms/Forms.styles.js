@@ -34,7 +34,6 @@ export const InfoWrapper = styled.div`
   .about.light h1,
   .about.light p,
   .about.light h3 {
-    /* background-color: teal; */
     color: #000;
   }
 
@@ -52,10 +51,9 @@ export const InfoWrapper = styled.div`
   @media screen and (max-width: 579px) {
     margin-left: 1rem;
     margin-right: 4rem;
-    /* border: 4px solid red; */
-
+ 
     h1 {
-      margin-left: -10rem;
+      margin-left: -8rem;
       text-align: left;
       margin-top: -2rem;
       font-size: 2rem;

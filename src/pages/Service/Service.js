@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { Footer } from "../../components/footer/Footer";
-// import { NavBar } from "../../components/navbar/NavBar";
 import { DesignCard } from "./components/DesignContent/DesignContent";
 import { useTheme } from "../../context/useTheme";
 
@@ -9,7 +7,6 @@ export const Service = () => {
 
   return (
     <>
-      {/* <NavBar /> */}
       <HeaderText>
         <div className={`about ${mode}`}>
           Services
@@ -17,17 +14,12 @@ export const Service = () => {
         </div>
       </HeaderText>
       <DesignCard />
-      <Footer />
     </>
   );
 };
 
 export const Container = styled.div``;
 export const HeaderText = styled.div`
-  .about.dark {
-    /* border: 3px solid red; */
-    /* background-color: red; */
-  }
 
   .about.light {
     /* background-color: teal; */

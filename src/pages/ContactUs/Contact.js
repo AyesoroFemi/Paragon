@@ -1,4 +1,4 @@
-import { Footer } from "../../components/footer/Footer";
+// import { Footer } from "../../components/footer/Footer";
 import { Forms } from "../../components/forms/Forms";
 
 export const Contact = () => {
@@ -8,7 +8,6 @@ export const Contact = () => {
           <div style={{marginTop: '4rem',marginBottom: '6rem'}}>
             <Forms/>
           </div>
-          <Footer/>
       </div>
   )
 };

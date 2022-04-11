@@ -1,6 +1,6 @@
-import { Email } from "../icons/Email";
-import { Location } from "../icons/Location";
-import { Phone } from "../icons/Phone";
+import { Email, DarkEmail } from "../icons/Email";
+import { DarkLocation, Location } from "../icons/Location";
+import { Phone, DarkPhone } from "../icons/Phone";
 import { BsArrowRight } from "react-icons/bs";
 import { useTheme } from "../../context/useTheme";
 
@@ -23,21 +23,21 @@ export const Forms = () => {
           <h1>Info</h1>
         </div>
         <AddressWrapper>
-          <Location />
+        { mode === "dark" ? <Location />: <DarkLocation />}
           <div className={`about ${mode}`}>
             <p>Address</p>
             <h3>Wuse, Abuja | Nigeria</h3>
           </div>
         </AddressWrapper>
         <AddressWrapper>
-          <Phone />
+        { mode === "dark" ? <Phone />:  <DarkPhone />}
           <div className={`about ${mode}`}>
             <p>Phone/Whatsapp</p>
             <h3>Wuse, Abuja | Nigeria</h3>
           </div>
         </AddressWrapper>
         <AddressWrapper style={{ marginLeft: "1rem" }}>
-          <Email />
+        { mode === "dark" ?  <Email /> :   <DarkEmail />}
           <div className={`about ${mode}`}>
             <p>E-mail</p>
             <h3>rabibabayo@gmail.com</h3>

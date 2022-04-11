@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import styled from "styled-components"
-import { Footer } from "../../components/footer/Footer"
-// import { NavBar } from "../../components/navbar/NavBar"
 import { HeaderText } from "../Service/Service"
 import { ArchDesign } from "./components/ArchDesign"
 import { InteriorDesign } from "./components/InteriorDesign"
@@ -14,7 +12,6 @@ export const PortFolio = () => {
 
     return (
       <div>
-          {/* <NavBar/> */}
           <HeaderText>
                  Portfolio
                 <p></p>
@@ -27,7 +24,6 @@ export const PortFolio = () => {
         {step === 1 &&  <ViewAll/>}
         {step === 2 &&  <ArchDesign/>}
         {step === 3 &&   <InteriorDesign/>}
-         <Footer/>
       </div>
     )
 }

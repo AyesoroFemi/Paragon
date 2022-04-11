@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// import { DarkRuler } from "../../../../components/icons/DarkRuler";
 
 export const DesignContent = styled.div`
 
@@ -48,3 +49,7 @@ export const DesignContent = styled.div`
     }
   }
 `;
+
+// export const DesignIcon = styled(DarkRuler)`
+//     border: 3px solid red;
+// `

@@ -1,21 +1,34 @@
-
-import { DesignContent } from "./DesignContent.styles";
-import { DarkRuler } from "../../../../components/icons/DarkRuler";
+// import { DarkRuler } from "../../../../components/icons/DarkRuler";
 import { InteriorIcon } from "../../../../components/icons/InteriorIcon";
 import { ProjectDev } from "../../../../components/icons/ProjectDev";
 import { PlanIcon } from "../../../../components/icons/PlanIcon";
 import { BimIcon } from "../../../../components/icons/BimIcon";
+import { DarkInteriorIcon } from "../../../../components/icons/DarkInteriorIcon";
 
+import { DarkPlanIcon } from "../../../../components/icons/DarkPlanIcon";
 import { useTheme } from "../../../../context/useTheme";
 
-export const DesignCard = () => {
+import ArchLight from "../../../../assets/arch_light.svg";
+import Frame from "../../../../assets/Frame.svg";
+import Pdark from "../../../../assets/dark_pd.svg";
+import Plight from "../../../../assets/pd_light.svg";
 
-  const { mode } = useTheme()
+import { DesignContent } from "./DesignContent.styles";
+import { DarkBimIcon } from "../../../../components/icons/DarkBimIcon";
+
+export const DesignCard = () => {
+  const { mode } = useTheme();
 
   return (
     <DesignContent>
       <div className={`about ${mode}`}>
-        <DarkRuler  current="lightblue" fill="#e59d30" />
+        <div>
+          {mode === "dark" ? (
+            <img src={ArchLight} alt="" />
+          ) : (
+            <img src={Frame} alt="" />
+          )}
+        </div>
         <h3>Architecture Design</h3>
         <p>
           Our success is achieved through effective partnerships and meticulous
@@ -30,7 +43,13 @@ export const DesignCard = () => {
         </p>
       </div>
       <div className={`about ${mode}`}>
-        <ProjectDev  current="lightblue" fill="#e59d30" />
+        <div>
+          {mode === "dark" ? (
+            <img src={Pdark} alt="" />
+          ) : (
+            <img src={Plight} alt="" />
+          )}
+        </div>
         <h3>Project Develpment Consultancy</h3>
         <p>
           we leverage our experience our project management systems and
@@ -42,7 +61,7 @@ export const DesignCard = () => {
         </p>
       </div>
       <div className={`about ${mode}`}>
-        <PlanIcon  current="lightblue" fill="#e59d30" />
+        {mode === "dark" ? <PlanIcon /> : <DarkPlanIcon />}
         <h3>Planning & Urban Design</h3>
         <p>
           Urban design and planning are integrated at every stage of a project,
@@ -56,7 +75,7 @@ export const DesignCard = () => {
         </p>
       </div>
       <div className={`about ${mode}`}>
-        <InteriorIcon  current="lightblue" fill="#e59d30" />
+      {mode === "dark" ? <InteriorIcon /> : <DarkInteriorIcon />}
         <h3>Interior Design</h3>
         <p>
           We are trusted by clients to create beautiful, experiential
@@ -71,7 +90,7 @@ export const DesignCard = () => {
         </p>
       </div>
       <div className={`about ${mode}`}>
-        <BimIcon  current="lightblue" fill="#e59d30" />
+      {mode === "dark" ? <BimIcon /> : <DarkBimIcon />}
         <h3>Pagagon Bim Solutions</h3>
         <p>
           Urban design and planning are integrated at every stage of a project,

@@ -15,7 +15,6 @@ import {
   ToggleImg,
 } from "./NavBar.styles";
 
-import ModeIcon from "../../assets/mode-icon2.svg";
 import LightMode from "../../assets/light_mode.svg";
 import DarkModeLight from "../../assets/dark_mode_white.svg";
 import LogoLight from "../../assets/logo_light.svg";
@@ -29,42 +28,60 @@ export const NavBar = () => {
   const toggleMode = () => {
     changeMode(mode === "dark" ? "light" : "dark");
   };
-  console.log(mode);
+//   console.log(mode);
   return (
     <NavWrapper>
-      <Container>
-        <div>
-          <Link to="/">
-            { mode === 'dark' ? <img src={LogoLight} alt="company_logo" /> : <img src={LogoMode} alt="company_logo"/> }
-          </Link>
-        </div>
-        <NavItem>
-          <div className={`about ${mode}`}>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/portfolio">Portfolio</NavLink>
-            <NavLink to="/services">Services</NavLink>
-            <NavLink to="/about">About Us</NavLink>
-            <NavLink to="/contact">Contact Us</NavLink>
-            <span onClick={toggleMode}>
-                {mode === 'dark' ? <img  src={DarkModeLight} alt="" /> : <img src={LightMode} alt="" />}
-            </span>
+      <div className={`about ${mode}`}>
+        <Container>
+          <div>
+            <Link to="/">
+              {mode === "dark" ? (
+                <img src={LogoLight} alt="company_logo" />
+              ) : (
+                <img src={LogoMode} alt="company_logo" />
+              )}
+            </Link>
           </div>
-        </NavItem>
-        <ToggleImg className="img_toggle" src={ModeIcon} alt="toggle_mode" />
-        <CustomNav onClick={() => setBurgerStatus(true)}>
-          <IoIosMenu color="#fff" size={40} />
-        </CustomNav>
-        <BurgerNav show={burgerStatus}>
-          <CustomClose onClick={() => setBurgerStatus(false)}>
-            <IoMdClose color="#fff" size={30} />
-          </CustomClose>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/portfolio">Portfolio</NavLink>
-          <NavLink to="/services">Services</NavLink>
-          <NavLink to="/about">About Us</NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
-        </BurgerNav>
-      </Container>
+          <NavItem>
+            <div className={`about ${mode}`}>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/portfolio">Portfolio</NavLink>
+              <NavLink to="/services">Services</NavLink>
+              <NavLink to="/about">About Us</NavLink>
+              <NavLink to="/contact">Contact Us</NavLink>
+              <span onClick={toggleMode}>
+                {mode === "dark" ? (
+                  <img src={DarkModeLight} alt="" />
+                ) : (
+                  <img src={LightMode} alt="" />
+                )}
+              </span>
+            </div>
+          </NavItem>
+          <ToggleImg onClick={toggleMode}>
+            {mode === "dark" ? (
+              <img src={DarkModeLight} alt="" />
+            ) : (
+              <img src={LightMode} alt="" />
+            )}
+          </ToggleImg>
+          <CustomNav onClick={() => setBurgerStatus(true)}>
+            <IoIosMenu color={mode === "dark" ? "#fff" : "#232323"} size={40} />
+          </CustomNav>
+            <BurgerNav mode={mode} show={burgerStatus}>
+              <CustomClose onClick={() => setBurgerStatus(false)}>
+                <IoMdClose color={mode === "dark" ? "#fff" : "#232323"} size={30} />
+              </CustomClose>
+              <div className={`about ${mode}`}>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/portfolio">Portfolio</NavLink>
+                <NavLink to="/services">Services</NavLink>
+                <NavLink to="/about">About Us</NavLink>
+                <NavLink to="/contact">Contact Us</NavLink>
+              </div>
+            </BurgerNav>
+        </Container>
+      </div>
     </NavWrapper>
   );
 };

@@ -9,6 +9,7 @@ import { Service } from "./pages/Service";
 import { useTheme } from "./context/useTheme";
 
 import './App.css'
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   const { mode } = useTheme();
@@ -25,6 +26,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );

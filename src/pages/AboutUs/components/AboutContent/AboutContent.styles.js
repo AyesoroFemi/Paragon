@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const ContentWrapper = styled.div`
 
     .about.light{
@@ -49,7 +50,5 @@ export const ContentWrapper = styled.div`
         line-height: 2rem;
     }
     }
-
-   
-
 `
+

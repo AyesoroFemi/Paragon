@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { Footer } from "../../components/footer/Footer";
-// import { NavBar } from "../../components/navbar/NavBar";
 import { HeaderText } from "../Service/Service";
 import { AboutContent } from "./components/AboutContent/AboutContent";
 import { useTheme } from "../../context/useTheme";
@@ -11,7 +9,6 @@ export const About = () => {
 
   return (
     <div>
-      {/* <NavBar /> */}
       <AboutWrap>
         <HeaderText style={{ marginTop: "1.3rem" }}>
             <div className={`about ${mode}`}>
@@ -21,7 +18,6 @@ export const About = () => {
         </HeaderText>
         <AboutContent />
       </AboutWrap>
-      <Footer />
     </div>
   );
 };
