@@ -1,6 +1,4 @@
-// import { DarkRuler } from "../../../../components/icons/DarkRuler";
 import { InteriorIcon } from "../../../../components/icons/InteriorIcon";
-import { ProjectDev } from "../../../../components/icons/ProjectDev";
 import { PlanIcon } from "../../../../components/icons/PlanIcon";
 import { BimIcon } from "../../../../components/icons/BimIcon";
 import { DarkInteriorIcon } from "../../../../components/icons/DarkInteriorIcon";
