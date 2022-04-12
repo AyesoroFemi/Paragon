@@ -1,3 +1,4 @@
+import { useEffect } from "react" 
 import styled from "styled-components"
 import { Container } from "../../components/navbar/NavBar.styles"
 import { AboutSession } from "./components/aboutSession/AboutSession"
@@ -10,6 +11,9 @@ import { SocialIcon } from "./components/SocialIcon"
 
 
 export const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
       <>

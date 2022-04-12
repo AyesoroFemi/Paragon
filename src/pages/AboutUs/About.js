@@ -1,3 +1,4 @@
+import { useEffect } from "react" 
 import styled from "styled-components";
 import { HeaderText } from "../Service/Service";
 import { AboutContent } from "./components/AboutContent/AboutContent";
@@ -5,6 +6,10 @@ import { useTheme } from "../../context/useTheme";
 
 export const About = () => {
   const { mode } = useTheme();
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div>

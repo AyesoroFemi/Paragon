@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { HeaderText } from "../Service/Service";
 import { ArchDesign } from "./components/ArchDesign";
@@ -11,6 +11,10 @@ export const PortFolio = () => {
   const { mode } = useTheme();
 
   const [step, setStep] = useState(1);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <PorfolioContainer>
