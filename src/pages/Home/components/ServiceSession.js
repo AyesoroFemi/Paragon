@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import { ServiceSlider } from "./ServicesSlider";
 import { useTheme } from "../../../context/useTheme";
-// import partern from "../../../assets/dark_mode.svg"
 
 export const ServiceSession = () => {
   const { mode } = useTheme();
 
   return (
-    <Wrap>
+    <Wrap mode={mode}>
       <div className={`about ${mode}`}>
         <h3>Our services</h3>
         <h1>What can we offer for your home</h1>
@@ -19,14 +18,9 @@ export const ServiceSession = () => {
 };
 
 export const Wrap = styled.div`
+  background-image: ${props => props.mode === "dark" ? `url(pattern_dark.png)` : `url(https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649666846/paragon-project/assets/PatternLight_d0zven.svg)`};
   height: 100%;
-  /* border: 3px solid red; */
-  /* background-image: url(https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375740/paragon-project/assets/Pattern_ymflos.png); */
 
-  background-image: ${(props) =>
-    props.mode === "dark"
-      ? `url(assets/Pattern.svg)`
-      : `url(https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649666846/paragon-project/assets/PatternLight_d0zven.svg)`};
   color: #fff;
   overflow-x: hidden;
   padding-bottom: 4rem;
@@ -35,11 +29,7 @@ export const Wrap = styled.div`
   .about.light h3 {
     color: #000;
   }
-  .about.dark {
-    /* border: 3px solid red; */
-    /* background-color: red; */
-  }
-
+  
   .about.light,
   .about.light {
     color: #232323;

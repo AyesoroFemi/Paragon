@@ -28,10 +28,10 @@ export const SliderContent = () => {
             understanding the challenges and solutions in each project.
           </ParaText>
           <ButtonGroup>
-            <PortFolioButton>
+            <PortFolioButton mode={mode}>
               <div>
                 <Link to="/portfolio">Show porfolio</Link>
-                <BsArrowRight color="#232323" size={20} />
+                <BsArrowRight color={mode === "dark" ? "#232323" : "#fff"} size={20} />
               </div>
             </PortFolioButton>
             <ShowButton>

@@ -88,7 +88,9 @@ export const DesignCard = () => {
         </p>
       </div>
       <div className={`about ${mode}`}>
-      {mode === "dark" ? <BimIcon /> : <DarkBimIcon />}
+            <div mode={mode}>
+            {mode === "dark" ? <BimIcon /> : <DarkBimIcon />}
+            </div>
         <h3>Pagagon Bim Solutions</h3>
         <p>
           Urban design and planning are integrated at every stage of a project,

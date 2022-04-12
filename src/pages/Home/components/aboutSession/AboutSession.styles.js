@@ -42,6 +42,7 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 579px) {
     margin-right: 2rem;
     margin-left: 2rem;
+    margin-top: 100px;
 
     div h1 {
     font-size: 2rem;
@@ -102,10 +103,11 @@ export const ButtonWrapper = styled.div`
   padding: 1rem 1.4rem;
   border-radius: 5px;
   max-width: 9rem;
-  background-color: #fff;
+  /* background-color: #fff; */
   align-items: center;
   gap: 10px;
-  box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
+  box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.15);
+  background-color: ${(props) => (props.mode === "dark" ? "#fff" : "#232323")};
 
   div {
 
@@ -113,7 +115,8 @@ export const ButtonWrapper = styled.div`
 
   a {
     text-decoration: none;
-    color: #232323;
+    /* color: #232323; */
     font-weight: 500;
+    color: ${(props) => (props.mode === "dark" ? "#232323" : "#fff")};
   }
 `;

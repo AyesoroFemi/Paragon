@@ -17,7 +17,7 @@ import {
 export const Forms = () => {
   const { mode } = useTheme();
   return (
-    <FormWrapper>
+    <FormWrapper mode={mode}>
       <InfoWrapper>
         <div className={`about ${mode}`}>
           <h1>Info</h1>
@@ -63,7 +63,7 @@ export const Forms = () => {
               <label>Message</label> <br />
               <textarea type="Message" />
             </FormElement>
-            <SubmitButtom>
+            <SubmitButtom mode={mode}>
               <button>
                 Submit
                 <BsArrowRight color="" size={20} />

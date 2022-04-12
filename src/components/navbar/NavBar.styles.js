@@ -66,7 +66,8 @@ export const NavItem = styled.div`
 `;
 
 export const ToggleImg = styled.span`
-  margin-top: .6rem;
+  margin-top: 1rem;
+  margin-left: 3rem;
   
 
   @media screen and (min-width: 991px) {
@@ -95,16 +96,15 @@ export const BurgerNav = styled.div`
       props.show ? "translateX(0)" : "translateX(100%)"};
     transition: transform 0.2s;
 
+
     .active {
       border-bottom: 3px solid #e59d30;
       padding: 8px 8px;
-      /* border: 2px solid red; */
     }
 
     div:nth-of-type(2) {
         display: flex;
         flex-direction: column;
-      /* border: 1px solid red; */
     }
 
     .about.light a{
@@ -114,7 +114,6 @@ export const BurgerNav = styled.div`
     a {
       margin-left: 3rem;
       margin-right: 3rem;
-      /* padding: .5rem; */
       padding-top: 2.5rem;
       padding-bottom: 2.5rem;
       color: #fff;
@@ -130,6 +129,7 @@ export const CustomNav = styled.div`
   @media screen and (max-width: 991px) {
     display: inline-block;
     cursor: pointer;
+    margin-top: .5rem;
   }
 `;
 export const CustomClose = styled.div`

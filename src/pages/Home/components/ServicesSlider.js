@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { useTheme } from "../../../context/useTheme";
 import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,9 +10,15 @@ import { InteriorIcon } from "../../../components/icons/InteriorIcon";
 import { PlanIcon } from "../../../components/icons/PlanIcon";
 import { ProjectDev } from "../../../components/icons/ProjectDev";
 import { BimIcon } from "../../../components/icons/BimIcon";
-import { Link } from "react-router-dom";
+import { DarkBimIcon } from "../../../components/icons/DarkBimIcon";
+import { DarkInteriorIcon } from "../../../components/icons/DarkInteriorIcon";
+import { DarkPlanIcon } from "../../../components/icons/DarkPlanIcon";
+import { Arrow } from "../../../components/icons/Arrow";
+import { DarkProjectDev } from "../../../components/icons/DarkProjectDev";
 
 export const ServiceSlider = () => {
+  const { mode } = useTheme();
+
   var settings = {
     infinite: true,
     centerMode: true,
@@ -62,11 +70,8 @@ export const ServiceSlider = () => {
         }}
       >
         <Items>
-          <ItemWrapper>
-            <div>
-              <DarkWrapper current="lightblue" fill="#e59d30" />
-            </div>
-            {/* <DarkRuler  /> */}
+          <ItemWrapper mode={mode}>
+            {mode === "dark" ? <DarkRuler /> : <Arrow />}
             <h2>Architecture Design</h2>
             <p className="architecture__design">
               Our success is achieved through effective partnerships and
@@ -75,14 +80,16 @@ export const ServiceSlider = () => {
               designs
             </p>
             <GroupLink>
-              <Link to="/services">Show more</Link>
-              <BsArrowRight color="#232323" size={20} />
+              <LinkWrapper mode={mode} to="/services">
+                Show more
+              </LinkWrapper>
+              <BsArrowRight color={mode !== "dark" ? "#fff" : "#232323"} size={20} />
             </GroupLink>
           </ItemWrapper>
         </Items>
         <Items>
-          <ItemWrapper>
-            <ProjectDev current="lightblue" fill="#e59d30" />
+          <ItemWrapper mode={mode}>
+            {mode === "dark" ? <DarkProjectDev /> : <ProjectDev />}
             <h2>Project Development Consultancy</h2>
             <p>
               we leverage our experience our project management systems and
@@ -90,28 +97,35 @@ export const ServiceSlider = () => {
               practice
             </p>
             <GroupLink>
-              <Link to="/services">Show more</Link>
-              <BsArrowRight color="#232323" size={20} />
+              <LinkWrapper mode={mode} to="/services">
+                Show more
+              </LinkWrapper>
+              <BsArrowRight
+                color={mode !== "dark" ? "#fff" : "#232323"}
+                size={20}
+              />
             </GroupLink>
           </ItemWrapper>
         </Items>
         <Items>
-          <ItemWrapper>
-            <PlanIcon current="lightblue" fill="#e59d30" />
+          <ItemWrapper mode={mode}>
+            {mode === "dark" ? <DarkPlanIcon /> : <PlanIcon />}
             <h2>Planning & Urban Design</h2>
             <p>
               We are happy to share our work with you. For your convenience, we
               have collected by category. Enjoy watching!
             </p>
             <GroupLink>
-              <Link to="/services">Show more</Link>
-              <BsArrowRight color="#232323" size={20} />
+              <LinkWrapper mode={mode} to="/services">
+                Show more
+              </LinkWrapper>
+              <BsArrowRight color={mode !== "dark" ? "#fff" : "#232323"} size={20} />
             </GroupLink>
           </ItemWrapper>
         </Items>
         <Items>
-          <ItemWrapper>
-            <InteriorIcon current="lightblue" fill="#e59d30" />
+          <ItemWrapper mode={mode}>
+            {mode === "dark" ? <DarkInteriorIcon /> : <InteriorIcon />}
             <h2>Interior Design</h2>
             <p className="interior__design" style={{ marginTop: "4rem" }}>
               We are trusted by clients to create beautiful, experiential
@@ -119,14 +133,16 @@ export const ServiceSlider = () => {
               strategic and insightful approach.
             </p>
             <GroupLink>
-              <Link to="/services">Show more</Link>
-              <BsArrowRight color="#232323" size={20} />
+              <LinkWrapper mode={mode} to="/services">
+                Show more
+              </LinkWrapper>
+              <BsArrowRight color={mode !== "dark" ? "#fff" : "#232323"} size={20} />
             </GroupLink>
           </ItemWrapper>
         </Items>
         <Items>
-          <ItemWrapper>
-            <BimIcon current="lightblue" fill="#e59d30" />
+          <ItemWrapper mode={mode}>
+            {mode === "dark" ? <DarkBimIcon /> : <BimIcon />}
             <h2>Paragon Bim Solutions</h2>
             <p>
               An information model-centric approach brings common understanding
@@ -134,8 +150,10 @@ export const ServiceSlider = () => {
               helps them make.
             </p>
             <GroupLink>
-              <Link className="link__service" to="/services">Show more</Link>
-              <BsArrowRight color="#232323" size={20} />
+              <LinkWrapper mode={mode} className="link__service" to="/services">
+                Show more
+              </LinkWrapper>
+              <BsArrowRight color={mode !== "dark" ? "#fff" : "#232323"} size={20} />
             </GroupLink>
           </ItemWrapper>
         </Items>
@@ -169,26 +187,25 @@ export const Items = styled.div`
     }
 
     div p {
-      /* border: 3px solid red; */
       font-size: 16px;
     }
   }
 `;
 
 export const ItemWrapper = styled.div`
-  background-color: #fff;
-  /* color: ${(props) => props.fill} */
+  background-color: ${(props) => (props.mode === "dark" ? "#fff" : "#232323")};
+  color: ${(props) => (props.mode === "dark" ? "#232323" : "#fff")};
   margin: 0 1.2rem;
   /* width: 100%; */
   padding: 2rem;
-  color: #232323;
   box-shadow: 5px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
   height: 450px;
+
   &:hover {
-    /* color: ${(props) => props.current} */
-    background-color: #232323;
-    border: 1px solid #fff;
-    color: #fff;
+    background-color: ${(props) =>
+      props.mode === "dark" ? "#E59D30" : "#E59D30"};
+    border: ${(props) =>
+      props.mode === "dark" ? "3px solid #232323" : "3px solid #fff"};
   }
 
   .architecture__design {
@@ -240,16 +257,11 @@ export const GroupLink = styled.div`
   margin-top: 3rem;
   margin-bottom: 1rem;
 
-  .link__service:hover{
+  /* .link__service:hover {
     color: #fff;
-  }
+  } */
 `;
 
-// export const LinkWrapper = styled.div`
-//     color: #232323;
-//     border: 8px solid red;
-
-//     &:hover{
-//       color: #fff;
-//     }
-// `
+export const LinkWrapper = styled(Link)`
+    color: ${(props) => (props.mode === "dark" ? "#232323" : "#fff")};
+`

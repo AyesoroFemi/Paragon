@@ -1,7 +1,5 @@
 import styled from "styled-components"
-// import { Footer } from "../../components/footer/Footer"
 import { Container } from "../../components/navbar/NavBar.styles"
-
 import { AboutSession } from "./components/aboutSession/AboutSession"
 import { Banner } from "./components/Banner"
 import { Forms } from "../../components/forms/Forms"
@@ -24,7 +22,6 @@ export const Home = () => {
           <Gallery />
           <Banner />
           <Forms />
-        {/* <Footer/> */}
       </>
     )
 }

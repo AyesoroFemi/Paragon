@@ -3,7 +3,10 @@ import styled from "styled-components";
 export const FormWrapper = styled.div`
   border: 1px solid transparent;
   /* height: 120vh; */
-  background-image: url(https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375740/paragon-project/assets/Pattern_ymflos.png);
+  background-image: ${(props) =>
+    props.mode === "dark"
+      ? `url(pattern_dark.png)`
+      : `url(https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649666846/paragon-project/assets/PatternLight_d0zven.svg)`};
   color: #fff;
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -51,7 +54,7 @@ export const InfoWrapper = styled.div`
   @media screen and (max-width: 579px) {
     margin-left: 1rem;
     margin-right: 4rem;
- 
+
     h1 {
       margin-left: -8rem;
       text-align: left;
@@ -73,15 +76,14 @@ export const AddressWrapper = styled.div`
 export const FormGroup = styled.div`
   .about.light div,
   .about.light textarea {
-    background-color: #232323;
+    background-color: #000;
     color: #fff;
   }
-  .about.light input {
-    border-bottom: 2px solid #fff;
-    border: none;
-    /* padding: 0 2rem; */
+  .about.light input,
+  .about.light textarea {
+    border-bottom: 1px solid #fff;
     outline: none;
-    /* background-color:#232323; */
+    background-color: #000;
   }
 `;
 
@@ -91,8 +93,6 @@ export const FormContent = styled.div`
   margin-right: 5rem;
   color: black;
   padding: 2rem;
-
-  /* border: 3px solid red; */
 
   @media screen and (max-width: 991px) {
     margin-left: 7rem;
@@ -121,8 +121,9 @@ export const SubmitButtom = styled.div`
   button {
     display: flex;
     align-items: center;
-    background-color: #232323;
-    color: #fff;
+    /* background-color: #232323; */
+    background-color: ${(props) => (props.mode === "dark" ? "#232323" : "#fff")};
+    color: ${(props) => (props.mode === "dark" ? "#fff" : "#232323")};
     font-weight: 500;
     border: none;
     gap: 1rem;

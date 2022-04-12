@@ -29,9 +29,9 @@ export const AboutSession = () => {
           architectural design, urban design, master planning and interior
           design services for both clients in the public and private sectors.
         </p>
-        <ButtonWrapper>
+        <ButtonWrapper mode={mode}>
           <Link to="/portfolio">Show porfolio</Link>
-          <BsArrowRight color="#232323" size={20} />
+          <BsArrowRight color={mode === "dark" ? "#232323" : "#fff"} size={20} />
         </ButtonWrapper>
       </div>
     </Wrapper>

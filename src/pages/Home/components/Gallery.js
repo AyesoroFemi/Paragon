@@ -4,39 +4,48 @@ import { Link } from "react-router-dom";
 import { useTheme } from "../../../context/useTheme";
 
 export const Gallery = () => {
-  const { mode } = useTheme()
+  const { mode } = useTheme();
   return (
     <GalleryContainer>
       <div className={`about ${mode}`}>
-      <h3>Portfolio</h3>
-      <ImageWrapper>
-        <img
-          src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375741/paragon-project/assets/photo5_rhkb7r.png"
-          alt=""
-        />
-        <img
-          src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375742/paragon-project/assets/photo_ki97gz.png"
-          alt=""
-        />
-        <img
-          src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375744/paragon-project/assets/photo4_sohmsr.png"
-          alt=""
-        />
-        <img
-          src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375744/paragon-project/assets/photo6_wci7wm.png"
-          alt=""
-        />
-        <img src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375745/paragon-project/assets/photo2_iydmcd.png" alt="" />
-        <img src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375742/paragon-project/assets/photo3_wt3fgh.png" alt="" />
-      </ImageWrapper>
-      <ProfileButton>
-        <span>
-          <Link to="/portfolio" style={{ color: "#232323" }} href="">
-            Show Portfolio
-          </Link>
-          <BsArrowRight color="" size={20} />
-        </span>
-      </ProfileButton>
+        <h3>Portfolio</h3>
+        <ImageWrapper>
+          <img
+            src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375741/paragon-project/assets/photo5_rhkb7r.png"
+            alt=""
+          />
+          <img
+            src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375742/paragon-project/assets/photo_ki97gz.png"
+            alt=""
+          />
+          <img
+            src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375744/paragon-project/assets/photo4_sohmsr.png"
+            alt=""
+          />
+          <img
+            src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375744/paragon-project/assets/photo6_wci7wm.png"
+            alt=""
+          />
+          <img
+            src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375745/paragon-project/assets/photo2_iydmcd.png"
+            alt=""
+          />
+          <img
+            src="https://res.cloudinary.com/dvwbbiu0g/image/upload/v1649375742/paragon-project/assets/photo3_wt3fgh.png"
+            alt=""
+          />
+        </ImageWrapper>
+        <ProfileButton mode={mode}>
+          <span>
+            <Link to="/portfolio" >
+              Show Portfolio
+            </Link>
+            <BsArrowRight
+              color={mode === "dark" ? "#232323" : "#fff"}
+              size={20}
+            />
+          </span>
+        </ProfileButton>
       </div>
     </GalleryContainer>
   );
@@ -47,15 +56,10 @@ export const GalleryContainer = styled.div`
   margin-right: 7rem;
   margin-bottom: 5rem;
 
-  .about.dark h3 {
-        /* border: 3px solid red; */
-        /* background-color: red; */
-    }
-
-    .about.light h3{
-        /* background-color: teal; */
-        color: #000;
-    }
+  .about.light h3 {
+    /* background-color: teal; */
+    color: #000;
+  }
 
   h3 {
     color: #fff;
@@ -100,15 +104,15 @@ export const ProfileButton = styled.div`
     padding: 0.1rem 1rem;
     background-color: #232323;
     border-radius: 5px;
-    /* justify-content: ; */
-    background-color: #fff;
+    background-color: ${(props) =>
+      props.mode === "dark" ? "#fff" : "#232323"};
     margin: 5rem 0;
     gap: 8px;
   }
+
   a {
-    color: #fff;
-    /* background: #fff; */
     padding: 0.8rem 0.1rem;
     border-radius: 5px;
+    color: ${(props) => (props.mode === "dark" ? "#232323" : "#fff")};
   }
 `;
