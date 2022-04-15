@@ -10,7 +10,7 @@ export const Service = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-  
+
   return (
     <>
       <HeaderText>
