@@ -1,10 +1,16 @@
+import { useEffect } from "react"
 import styled from "styled-components";
 import { DesignCard } from "./components/DesignContent/DesignContent";
 import { useTheme } from "../../context/useTheme";
 
 export const Service = () => {
+
   const { mode } = useTheme();
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <>
       <HeaderText>
