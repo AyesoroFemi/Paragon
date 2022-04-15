@@ -9,7 +9,7 @@ export const ViewContainer = styled.div`
   img {
     /* max-width: 100%; */
     width: 100%;
-    height: 400px;
+    height: 100%;
   }
 
   .first__line {
