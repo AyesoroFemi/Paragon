@@ -91,7 +91,7 @@ export const DesignCard = () => {
             <div mode={mode}>
             {mode === "dark" ? <BimIcon /> : <DarkBimIcon />}
             </div>
-        <h3>Pagagon Bim Solutions</h3>
+        <h3>Paragon Bim Solutions</h3>
         <p>
           Urban design and planning are integrated at every stage of a project,
           to ensure our master plans, approvals, designs, and policies are
