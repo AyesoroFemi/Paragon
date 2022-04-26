@@ -104,8 +104,8 @@ export const ServiceSlider = () => {
         }}
       >
         {
-          data.map((item, index)=>(
-            <CardSlide item={item}/>
+          data.map((item)=>(
+            <CardSlide key={item.id} item={item}/>
           ))
         }
         {/* <Items onMouseOver={()=>setShowIconOnDarkMode(!showIconOnDarkMode)} onMouseOut={()=>setShowIconOnDarkMode(!showIconOnDarkMode)}>

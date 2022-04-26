@@ -13,7 +13,6 @@ import { Footer } from "./components/footer/Footer";
 
 function App() {
   const { mode } = useTheme();
-  console.log({mode})
 
   return (
     <div className={`Paragon ${mode==='dark'?"dark":"light"}`}>
