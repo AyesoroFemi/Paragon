@@ -1,3 +1,17 @@
 .App.dark {
-    background: #232323;
+  background: #232323;
+}
+
+.App {
+  max-width: 1500px;
+  margin: -0.5rem auto;
+}
+
+.Paragon.dark {
+  background: #232323;
+  min-width: 100vw;
+}
+.Paragon.light {
+  background: #ffff;
+  min-width: 100vw;
 }

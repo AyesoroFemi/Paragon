@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const NavWrapper = styled.div`
   border: 1px solid transparent;
   margin-top: -0.5rem;
+ 
 
 `;
 
