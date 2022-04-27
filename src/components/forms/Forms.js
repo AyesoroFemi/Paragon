@@ -23,21 +23,21 @@ export const Forms = () => {
           <h1>Info</h1>
         </div>
         <AddressWrapper>
-        { mode === "dark" ? <Location />: <DarkLocation />}
+          {mode === "dark" ? <Location /> : <DarkLocation />}
           <div className={`about ${mode}`}>
             <p>Address</p>
             <h3>Wuse, Abuja | Nigeria</h3>
           </div>
         </AddressWrapper>
         <AddressWrapper>
-        { mode === "dark" ? <Phone />:  <DarkPhone />}
+          {mode === "dark" ? <Phone /> : <DarkPhone />}
           <div className={`about ${mode}`}>
             <p>Phone/Whatsapp</p>
-            <h3>Wuse, Abuja | Nigeria</h3>
+            <h3>090-303-009-00</h3>
           </div>
         </AddressWrapper>
         <AddressWrapper style={{ marginLeft: "1rem" }}>
-        { mode === "dark" ?  <Email /> :   <DarkEmail />}
+          {mode === "dark" ? <Email /> : <DarkEmail />}
           <div className={`about ${mode}`}>
             <p>E-mail</p>
             <h3>rabibabayo@gmail.com</h3>
