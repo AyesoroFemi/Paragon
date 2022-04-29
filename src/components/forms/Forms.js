@@ -30,7 +30,7 @@ export const Forms = () => {
           </div>
         </AddressWrapper>
         <AddressWrapper>
-          {mode === "dark" ? <Phone /> : <DarkPhone />}
+        <div style={{ marginLeft: '-2rem'}}>  {mode === "dark" ? <Phone /> : <DarkPhone />}</div>
           <div className={`about ${mode}`}>
             <p>Phone/Whatsapp</p>
             <h3>090-303-009-00</h3>

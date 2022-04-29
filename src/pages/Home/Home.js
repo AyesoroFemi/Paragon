@@ -31,5 +31,4 @@ export const Home = () => {
 }
 
 export const IconWrapper= styled(Container)`
-
 `
